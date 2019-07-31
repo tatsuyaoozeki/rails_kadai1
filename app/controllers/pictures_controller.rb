@@ -11,8 +11,11 @@ class PicturesController < ApplicationController
 
   def create
     @picture = Picture.new(picture_params)
-    if @picture.save
-      redirect_to new_pictures_path, notice: "作成しました!"
+    if @picture[:back]
+      render 'new'
+    else
+      if @picture.save
+      redirect_to pictures_path, notice: "作成しました!"
     else
       render 'new'
     end
@@ -42,6 +45,7 @@ class PicturesController < ApplicationController
 
   def confirm
     @picture = Picture.new(picture_params)
+    render :new if @picture.invalid?
   end
 
   private
