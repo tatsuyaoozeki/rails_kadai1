@@ -1,4 +1,5 @@
 class Picture < ApplicationRecord
-  validates :content, presence: true, length: {in: 1..140}
+  mount_uploader :image, ImageUploader
+  validates :content, presence: true
   belongs_to :user
 end
