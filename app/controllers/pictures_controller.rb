@@ -8,8 +8,12 @@ class PicturesController < ApplicationController
   end
 
   def create
-    @picture = Picture.create(params[:picture])
+    @picture = Picture.create(picture_params)
     redirect_to new_picture_path
+  end
+
+  def show
+    @picture = Picture.find(params[:id])
   end
 
   private
