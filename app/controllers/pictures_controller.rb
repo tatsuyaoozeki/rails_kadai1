@@ -40,6 +40,10 @@ class PicturesController < ApplicationController
     redirect_to pictures_path, notice:"削除しました!"
   end
 
+  def confirm
+    @picture = Picture.new(picture_params)
+  end
+
   private
 
   def picture_params
