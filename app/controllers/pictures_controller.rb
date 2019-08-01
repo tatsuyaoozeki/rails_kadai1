@@ -33,7 +33,7 @@ class PicturesController < ApplicationController
   def update
     @picture = Picture.find(params[:id])
       if @picture.update(picture_params)
-        redirect_to pictures_path, notice: "編集しました"
+        redirect_to pictures_path, notice: "編集しました!"
       else
         render :edit
       end
