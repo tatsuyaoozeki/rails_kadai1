@@ -11,13 +11,13 @@ class PicturesController < ApplicationController
 
   def create
     @picture = current_user.pictures.build(picture_params)
-    if @picture[:back]
-      render 'new'
+    if params[:back]
+      render :new
     else
       if @picture.save
         redirect_to pictures_path, notice: "作成しました!"
       else
-        render 'new'
+        render :new
       end
     end
   end
@@ -32,11 +32,11 @@ class PicturesController < ApplicationController
 
   def update
     @picture = Picture.find(params[:id])
-    if @picture.update(picture_params)
-      redirect_to pictures_path, notice: "編集しました"
-    else
-      render 'edit'
-    end
+      if @picture.update(picture_params)
+        redirect_to pictures_path, notice: "編集しました"
+      else
+        render :edit
+      end
   end
 
   def destroy
