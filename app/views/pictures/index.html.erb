@@ -1,24 +1,53 @@
-<%= render 'header' %>
+<div class="container-fluid pic">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-3">
+      <nav id="side_menu">
+        <ul>
+          <li class="power"><a href=""><i class="fas fa-user-circle"></i>Tatsuya Oozeki</a></li>
+          <li class="power"><a href=""><i class="fas fa-book-open"></i>ニュースフィード</a></li>
+          <li class="power"><a href=""><i class="fab fa-facebook-messenger"></i>Messanger</a></li>
+          <li class="power"><span>ショートカット</span></li>
+          <li class="power"><span>発見</span></li>
+          <li class="power"><a href=""><i class="fas fa-coins"></i>募金</a></li>
+          <li class="power"><a href=""><i class="far fa-flag"></i>ページ</a></li>
+          <li class="power"><a href=""><i class="fas fa-users"></i>グループ</a></li>
+          <li class="power"><a href=""><i class="far fa-calendar-alt"></i>イベント</a></li>
+          <li class="power">
+            <%= link_to new_picture_path do %>
+              <i class="fas fa-upload"></i>投稿を作成
+            <% end %>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-md-4 text-center wrapper">
+      <% @pictures.each do |picture| %>
+      <nav class="content">
+        <ul>
+          <li><%= picture.user.name %></li>
+          <li><%= picture.content %></li>
+          <li><%= image_tag(picture.image.url) if picture.image && picture.image.url %></li>
+          <li><%= link_to '詳細', picture_path(picture.id) %></li>
+          <li><%= link_to '編集する', edit_picture_path(picture.id), data: { confirm: '本当に編集していいですか？' } %></li>
+          <li><%= link_to '削除する', picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></li>
+        </ul>
+      </nav>
+      <% end %>
+    </div>
 
-<h1>投稿一覧</h1>
-
-<table>
-  <tr>
-    <th>ユーザ</th>
-    <th>内容</th>
-    <th>写真</th>
-  </tr>
-
-<% @pictures.each do |picture| %>
-  <tr>
-    <td><%= picture.user.name %></td>
-    <td><%= picture.content %></td>
-    <td><%= image_tag(picture.image.url) if picture.image && picture.image.url %></td>
-    <td><%= link_to '詳細', picture_path(picture.id) %></td>
-    <td><%= link_to '編集する', edit_picture_path(picture.id), data: { confirm: '本当に編集していいですか？' } %></td>
-    <td><%= link_to '削除する', picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<%= link_to '新しく投稿する', new_picture_path %>
+    <div class="col-md-4">
+      <div class="navbar">
+        <h1>知り合いかも</h1>
+        <p><a href="">すべてを見る</a></p>
+        <ul>
+          <% 5.times do %>
+            <li><i class="fas fa-user-circle icon1"></i></li>
+            <li class="name">aaaaaaa</li>
+            <li class="button1"><button type="button" class="btn btn-primary my-2">友達になる</button></li>
+            <li class="button2"><button type="button" class="btn btn-secondary my-2">削除</button></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

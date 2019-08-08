@@ -13,18 +13,62 @@
 //   font-weight: bold;
 //   padding:0.5em;
 // }
-
-.col-4 ul{
-  margin: 0 auto;
+.container-fluid.user {
+  background: linear-gradient(white, #D3D8E8);
+  height: 85%;
 }
 
-.col-4 li{
+.col-6 li {
   list-style-type: none;
+  font-size: 2em;
+  line-height: 2em;
+  // padding-left: 5%;
+  color: #293f66;
+}
+
+.signup_info {
+  margin-left: 8%;
+}
+
+.form-signin{
+  margin-left: 0;
+}
+
+.col-6 h1 {
+  padding-left: 12%;
+  color: #293f66;
+  font-weight: bold;
 
 }
 
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 1em;
+  // margin: auto;
+}
 
+.form-signin .formcontrol {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 1em;
+  font-size: 1em;
+}
 
-h_form.btn btn-log_in {
+.form-label {
+  font-weight: bold;
+  margin-top: 1rem;
+}
 
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 0.8em;
 }

@@ -27,7 +27,7 @@ body {
 }
 
 .header {
-  height: 90px;
+  height: 3em;
   color: #fff;
   margin-left: 10%;
 }
@@ -35,12 +35,33 @@ body {
 .header h1 {
   font-weight: bold;
   padding:0.5em;
+  float:left;
 }
 
-
+.log-link {
+  float: right;
+  padding: 0;
+  color:inherit;
+}
 
 footer {
-  height: 90px;
-  color: #fff;
-  background-color: #3d5f99;
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2em;
+  color: #ccc;
+}
+
+footer p {
+  vertical-align: bottom;
+  text-align: center;
+}
+
+.clearfix {
+  content: "";
+  display: block;
+  clear: both;
 }

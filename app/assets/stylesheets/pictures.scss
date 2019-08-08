@@ -1,3 +1,127 @@
 // Place all the styles related to the pictures controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* サイドメニュー設定 */
+div.container-fluid.pic {
+  background-color: #FAFAFA;
+  background-repeat: repeat-y;
+  height: 100%;
+  width:100%;
+  margin: 0;
+  padding-top: 2em;
+}
+
+nav#side_menu{
+  text-align: left;
+  margin-left: 45%;
+}
+
+/* コンテンツメニューを高さを合わせるため */
+nav#side_menu ul{
+  margin-top: 0;
+  padding-left: 10%;
+}
+
+/* 各メニューのスタイル */
+#side_menu ul li{
+  height: 1.8em;
+  list-style-type: none;
+  margin-bottom: 2%;
+  line-height: 1.5em;
+  font-size: 1.5em;
+}
+
+.power span{
+  font-weight: bold;
+}
+
+/* メニューの見た目 */
+.power a{
+  vertical-align: middle;
+  font-weight: normal;
+  text-decoration: none;
+  display: block;
+  border-radius: 0.1em;
+}
+
+/* サイドメニューにマウスが乗ったら以下の適用 */
+.power a:hover{
+  transition-property: background-color;
+  background-color: #1da1f2;
+  color: #fff;
+}
+
+// サイドメニューアイコン
+i.fas fa-u.ser-circle {
+  font-size: 1em;
+}
+
+// ツイートの設定
+nav.content{
+  background-color: #fff;
+  border-radius: 0.8em;
+  padding: 0;
+  margin-bottom: 0 0 0.8em 0;
+  min-height: 300px;
+  text-overflow: hidden;
+  position: relative;
+}
+
+// 黒点を消す
+nav.content li{
+  list-style-type: none;
+}
+
+// 友人かもが表示されるナビゲーションバー表示
+.navbar {
+  background-color: #fff;
+  width: 70%;
+  height: auto;
+  margin-bottom: 1em;
+  border-radius: 0.8em;
+}
+
+.navbar h1 {
+  font-size: 1em;
+  color: #BDBDBD;
+  font-weight: 600;
+}
+
+.navbar li {
+  list-style-type: none;
+  margin-bottom: 1.5em;
+  font-size: 4em;
+  float: left;
+}
+
+.icon1 {
+  margin-left: 0;
+  font-size: 1.5em;
+}
+
+
+.navbar li.name{
+  font-size: 1em;
+  padding-left:0.5em;
+  vertical-align: top;
+}
+
+.button1 {
+  margin: 0.5em 0 -0.5em -0.8em;
+}
+
+.button2 {
+  margin: 0.5em 0 -0.5em 0;
+}
+
+a.btn btn-primary {
+  margin:0;
+}
+
+.lang-menu {
+  background-color: #fff;
+  list-style-type: none;
+  font-size: 0.8em;
+  width: 80%;
+  height: 20%;
+}

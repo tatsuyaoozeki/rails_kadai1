@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" rel="stylesheet">
   </head>
 
   <body>
@@ -16,22 +17,22 @@
         <h1>ImageBOOK</h1>
       </div>
     </header>
-        <% flash.each do |key, value| %>
-          <%= content_tag(:div, value, class: "#{key}") %>
-        <% end %>
+    <div class="log-link">
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, class: "#{key}") %>
+      <% end %>
 
-        <% if logged_in? %>
-          <%= link_to "Profile", user_path(current_user.id) %>
-          <%= link_to "Logout", session_path(current_user.id), method: :delete %>
-        <% else %>
-          <%= link_to "Sign up", new_user_path %>
-          <%= link_to "Login", new_session_path %>
-        <% end %>
-
-
+      <% if logged_in? %>
+        <%= link_to "Profile", user_path(current_user.id) %>
+        <%= link_to "Logout", session_path(current_user.id), method: :delete %>
+      <% else %>
+        <%= link_to "Sign up", new_user_path %>
+        <%= link_to "Login", new_session_path %>
+      <% end %>
+    </div>
       <%= yield %>
     <footer>
-      imageBOOK ©︎2019
+      <p>imageBOOK ©︎2019</p>
     </footer>
   </body>
 </html>

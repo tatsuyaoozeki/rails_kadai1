@@ -1,13 +1,15 @@
-<div class="container-fluid">
+<div class="container-fluid user">
   <div class="row">
-    <ul class="col-6">
+    <ul class="col-6 signup_info">
       <li>
         Facebookを使うと、友達や同僚、同級生、仲間たちとつながりを深められます。ケータイ、スマートフォンからもアクセスできます。
       </li>
+      <li>
+        <img src="" alt="">
+      </li>
     </ul>
 
-
-    <div class="col-6">
+    <div class="col-6 form-signin">
       <h1>Sign up</h1>
       <% if @user.errors.any? %>
       <div id="error_explanation">
@@ -23,18 +25,18 @@
       <ul>
       <%= form_with(model: @user, local: true) do |f| %>
         <li><%= f.label :name %></li>
-        <li><%= f.text_field :name %></li>
+        <li><%= f.text_field :name, class:"form-control", placeholder:"名前" %></li>
 
         <li><%= f.label :email %></li>
-        <li><%= f.email_field :email %></li>
+        <li><%= f.email_field :email, class:"form-control", placeholder:"Emailアドレス" %></li>
 
         <li><%= f.label :password %></li>
-        <li><%= f.password_field :password %></li>
+        <li><%= f.password_field :password, class:"form-control", placeholder:"パスワード" %></li>
 
-        <li><%= f.label :password_confirmation %></li>
-        <li><%= f.password_field :password_confirmation %></li>
+        <li><%= f.label :confirmation %></li>
+        <li><%= f.password_field :password_confirmation, class:"form-control", placeholder:"パスワード" %></li>
 
-        <li><%= f.submit "Create my account" %></li>
+        <li><%= f.submit "Create my account", class:"btn btn-primary btn-block" %></li>
       <% end %>
       </ul >
     </div>
