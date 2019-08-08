@@ -2,27 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// .header {
-//   height: 90px;
-//
-//   color: #fff;
-//   margin-left: 10%;
-// }
-//
-// .header h1 {
-//   font-weight: bold;
-//   padding:0.5em;
-// }
 .container-fluid.user {
   background: linear-gradient(white, #D3D8E8);
-  height: 85%;
+  height: 75%;
 }
 
 .col-6 li {
   list-style-type: none;
   font-size: 2em;
   line-height: 2em;
-  // padding-left: 5%;
   color: #293f66;
 }
 
@@ -45,7 +33,6 @@
   width: 100%;
   max-width: 330px;
   padding: 1em;
-  // margin: auto;
 }
 
 .form-signin .formcontrol {
@@ -66,7 +53,7 @@
 }
 
 .form-signin input[type="email"] {
-  margin-bottom: -1px;
+  margin-bottom: -0.8em;
 }
 
 .form-signin input[type="password"] {

@@ -11,13 +11,12 @@
   </head>
 
   <body>
-
-    <header class="top clearfix">
-      <div class="header">
+    <header>
+      <div class="col header">
         <h1>ImageBOOK</h1>
       </div>
-    </header>
-    <div class="log-link">
+
+    <div class="col log-link">
       <% flash.each do |key, value| %>
         <%= content_tag(:div, value, class: "#{key}") %>
       <% end %>
@@ -30,6 +29,8 @@
         <%= link_to "Login", new_session_path %>
       <% end %>
     </div>
+    </header>
+
       <%= yield %>
     <footer>
       <p>imageBOOK ©︎2019</p>

@@ -3,7 +3,7 @@
     <div class="form-signin">
       <h1 class="h3 mb-3 font-weight-bold">ログインをどうぞ</h1>
       <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
-
+      
         <%= f.label :email, class:"form-label" %>
         <%= f.email_field :email, class:"form-control", placeholder:"Emailアドレス" %>
 

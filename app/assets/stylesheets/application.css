@@ -22,27 +22,25 @@ body {
   padding: 0px;
 }
 
-.top{
-  background-color: #3d5f99;
-}
-
 .header {
-  height: 3em;
+  background-color: #3d5f99;
+  height: 7em;
   color: #fff;
-  margin-left: 10%;
+  padding-left: 10%;
 }
 
 .header h1 {
   font-weight: bold;
-  padding:0.5em;
-  float:left;
+  padding: 0.5em;
 }
 
 .log-link {
-  float: right;
+  background-color: #3d5f99;
   padding: 0;
-  color:inherit;
+  color: #fff;
 }
+
+
 
 footer {
   position: fixed;
@@ -58,10 +56,4 @@ footer {
 footer p {
   vertical-align: bottom;
   text-align: center;
-}
-
-.clearfix {
-  content: "";
-  display: block;
-  clear: both;
 }
