@@ -22,8 +22,8 @@
     </div>
     <div class="col-md-4 text-center wrapper">
       <% @pictures.each do |picture| %>
+      <%= link_to '削除する', picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %>
       <div class="content">
-        <%= link_to '削除する', picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %>
         <ul>
           <li><%= picture.user.name %></li>
           <li><%= picture.content %></li>
