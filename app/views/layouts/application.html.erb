@@ -22,11 +22,11 @@
       <% end %>
 
       <% if logged_in? %>
-        <%= link_to "Profile", user_path(current_user.id), :style => "color:#FAFAFA;" %>
-        <%= link_to "Logout", session_path(current_user.id), method: :delete,:style => "color:#FAFAFA;" %>
+        <%= button_to "Profile", user_path(current_user.id), :style => "color:#FAFAFA;" %>
+        <%= button_to "Logout", session_path(current_user.id), method: :delete,:style => "color:#FAFAFA;" %>
       <% else %>
-        <%= link_to "Sign up", new_user_path, :style => "color:#FAFAFA;" %>
-        <%= link_to "Login", new_session_path, :style => "color:#FAFAFA;" %>
+        <%= button_to "Sign up", new_user_path, :style => "color:#FAFAFA;" %>
+        <%= button_to "Login", new_session_path, :style => "color:#FAFAFA;" %>
       <% end %>
     </div>
     </header>
