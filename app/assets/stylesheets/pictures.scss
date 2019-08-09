@@ -62,7 +62,7 @@ i.fas fa-u.ser-circle {
 }
 
 // ツイートの設定
-nav.content{
+div.content{
   background-color: #fff;
   border-radius: 0.8em;
   padding: 0;
@@ -72,12 +72,12 @@ nav.content{
   position: relative;
 }
 
-nav.content ul {
+div.content ul {
   padding: 0;
 }
 
 // 黒点を消す
-nav.content li{
+div.content li{
   list-style-type: none;
 }
 
