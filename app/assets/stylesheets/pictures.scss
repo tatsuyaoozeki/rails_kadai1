@@ -10,7 +10,7 @@ div.container-fluid.pic {
   margin: 0;
 }
 
-.row {
+.row.bg-pic {
   background-color: #FAFAFA;
   background-repeat: repeat-y;
   padding-top: 2em;
@@ -73,7 +73,6 @@ nav.content{
 }
 
 nav.content ul {
-  
   padding: 0;
 }
 
@@ -128,10 +127,20 @@ a.btn btn-primary {
   margin:0;
 }
 
-.lang-menu {
+.logbar {
   background-color: #fff;
-  list-style-type: none;
-  font-size: 0.8em;
-  width: 80%;
-  height: 20%;
+  border-radius: 0.8em;
+  width: 50%;
+  height: auto;
+}
+
+.logs {
+  margin: 1em 0 0 1em;
+  color: #BDBDBD;
+}
+
+.list-unstyled {
+  font-size: 1.2em;
+  padding: 0 0 1em 3em;
+  line-height: 1.5em;
 }

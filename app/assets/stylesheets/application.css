@@ -27,6 +27,7 @@ body {
   height: 7em;
   color: #fff;
   padding-left: 10%;
+  width: 100%
 }
 
 .header h1 {
@@ -38,6 +39,7 @@ body {
   background-color: #3d5f99;
   padding: 0;
   color: #fff;
+  width: 100%;
 }
 
 
@@ -56,4 +58,10 @@ footer {
 footer p {
   vertical-align: bottom;
   text-align: center;
+}
+
+.clearfix {
+  content: "";
+  display: block;
+  clear: both;
 }
