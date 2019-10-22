@@ -6,7 +6,7 @@ set :application, 'imagebook'
 
 # cloneするgitのレポジトリ
 # （xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
-set :repo_url, 'https://github.com/tatsuyaoozeki/rails_kadai1'
+set :repo_url, 'https://github.com/tatsuyaoozeki/rails_kadai1.git'
 
 # deployするブランチ。デフォルトはmasterなのでなくても可。
 set :branch, ENV['BRANCH'] || 'master'
